@@ -771,10 +771,9 @@ article .card .cards-img-container img {
   }
   article ul {
     flex-flow: row nowrap !important;
-    gap: 17%;
   }
   article a {
-    width: 10% !important;
+    width: 100% !important;
   }
   article li {
     width: 180% !important;
