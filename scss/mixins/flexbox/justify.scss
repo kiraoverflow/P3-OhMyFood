@@ -1,0 +1,9 @@
+@mixin horizontal-center {
+    justify-content: center;
+}
+@mixin vertical-center {
+    align-items: center;
+}
+@mixin between {
+    justify-content: space-between;
+}

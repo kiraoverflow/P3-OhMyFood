@@ -1,0 +1,11 @@
+@import "../themes/ohmyfood-colors.scss";
+@import "../fonts/Roboto.scss";
+
+@mixin location-input {
+    font-family: "Roboto";
+    letter-spacing: 1px;  
+    font-size : 15px;
+    font-weight:900;
+    border : 0;
+    background-color: $smoke ;
+}

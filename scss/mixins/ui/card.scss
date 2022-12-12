@@ -1,0 +1,78 @@
+@import "../flexbox/size.scss";
+@import "../flexbox/justify.scss";
+@mixin card {
+        display: grid;
+        position : relative;
+        transition: all .15s ease-in-out;
+        box-shadow: 2px 0px 19px -4px rgb(165, 165, 165);
+        border-radius: 20px;
+        background-color: $bg-header;
+        padding-bottom : 4%;
+        
+        
+        .toast {
+            font-family: "Roboto", sans-serif;
+
+            position : absolute;
+            left : 75%;
+            top : 5%;
+            background: $toast ;
+            color : $toast-text;
+            padding : 2% 3% 2% 3%;
+            font-size: 0.8em;
+            text-align: center;
+            line-height: 80%;
+            border-radius: 8%;
+        }
+        
+        .card_content {
+            @include row;
+            @include between;
+            @include padding(1%);
+            @include padding-col(5%);
+            .left {
+                h3 {
+                    font-family: "Roboto-Bold", sans-serif;
+                    font-weight: bold;
+                    font-size : 1.3rem;
+                    line-height: 0.01rem;
+                }
+                
+                p {
+                    font-family: "Roboto-Light", sans-serif;
+                    font-size : 1.2rem;
+                }
+            }
+            
+            .right {
+                .fa-solid {
+                    color : transparent;
+                }
+                .fa-stack {
+                    border :0;
+                    font-size : 0.8em;
+                    margin-top: 10px;
+                    &:hover {
+                        .fa-solid{
+                            background: linear-gradient(45deg, $first , $second);
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            background-clip : text;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .cards-img-container {
+            img {
+                @include full-width;
+                object-fit: cover;
+                object-position: center 60%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                height: 180px;
+                max-width:100%;
+            }
+    }
+}

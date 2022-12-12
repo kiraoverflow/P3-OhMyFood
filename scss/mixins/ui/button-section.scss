@@ -1,0 +1,16 @@
+@use "../fonts/Roboto.scss";
+@use "../themes/ohmyfood-colors.scss";
+@mixin section-button {
+    display: block;
+    padding: 8%;
+    text-align : center;
+    width : 100%;
+    box-shadow: 2px 4px 13px -4px rgb(165, 165, 165);
+    border-radius: 20px;
+    background-color: $bg-header;
+    border : 0;
+    margin-left: 3%;
+    font-family: "Roboto-Bold", sans-serif;
+    font-weight: bold;
+    font-size : 1.1rem;
+}

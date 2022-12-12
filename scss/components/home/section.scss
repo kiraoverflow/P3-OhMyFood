@@ -1,0 +1,92 @@
+@import "../../mixins/flexbox/forms.scss";
+@import "../../mixins/flexbox/justify.scss";
+@import "../../mixins/flexbox/size.scss";
+@import "../../mixins/fonts/Shrikhand.scss";
+@import "../../mixins/paddings/paddings.scss";
+@import "../../mixins/fonts/font-size.scss";
+@import "../../mixins/margins/margins.scss";
+@import "../../mixins/themes/ohmyfood-colors.scss";
+@import "../../mixins/ui/button-section.scss";
+section {
+    @include column;
+    @include horizontal-center;
+    @include padding-row(5%);
+    @include margin-col(5%);
+    
+    h2 {
+        @include padding-right(55%);
+        @include margin-bottom(5%);
+        font-family: "Roboto-Bold", sans-serif;
+        font-size : 1.5rem;
+        font-weight: bold;
+    }
+    
+    ul {
+        @include column;
+        @include vertical-center;
+        @include full-width;
+    }
+
+    li {
+        @include margin-bottom(10%);
+        width : 90%;
+    }
+
+    button {
+        @include section-button;
+    }
+    
+    .number {
+        position : absolute;
+        margin-top : 7%;
+    }
+
+    .bulletpoint {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.8rem;
+        background: $first;
+        border-radius : 50%;
+        color : white;
+        @include padding-col(10px);
+        @include padding-row(7px);
+
+    }
+
+    i {
+        @include margin-left(10%);
+        @include margin-top(6.5%);
+        @include font-size(20px);
+        position : absolute;
+        color : $icons;
+    }
+}
+@media (min-width: 991px) { 
+    section {
+        flex-flow: row wrap !important;
+        padding-bottom: 4% !important;
+        h2 {
+            padding-right: 0 !important;
+        }
+        ul {
+            flex-flow: row nowrap !important;
+            align-items: none !important;
+            justify-content: none !important;
+            gap : 10% !important;
+
+        }
+        .number {
+            margin-top : 1.9% !important;
+
+        }
+        .bulletpoint {
+            padding-left: 13px !important;
+            padding-right : 13px !important;
+            padding-top : 10px !important;
+            padding-bottom: 10px !important;
+        }
+        i {
+            margin-top : 1.9% !important;
+            margin-left : 5% !important;
+        }
+    }
+}

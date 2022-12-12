@@ -1,0 +1,86 @@
+.spinner {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    animation-name: removeLoader;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+html {
+    animation-name: lock;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+// p,h1,h2,h3,button,img,span,i,input,a {
+//     animation-name : blur;
+//     animation-duration: 3s;
+//     animation-fill-mode: forwards;
+// }
+.loader-spinner {
+    font-size: 50px;
+    color : black;
+}
+
+.loader-spinner i {
+    animation-name: spinnerRotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes spinnerRotation {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+  
+  @keyframes lock {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow : visible;
+    } 
+  }
+  @keyframes blur {
+    from {
+        filter : blur(5px);
+    }
+    to {
+        filter : none;
+    }
+    
+  }
+  @keyframes removeLoader {
+    from {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    to {
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+}

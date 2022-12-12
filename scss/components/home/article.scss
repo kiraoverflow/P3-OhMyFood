@@ -1,0 +1,77 @@
+@import "../../mixins/flexbox/forms.scss";
+@import "../../mixins/flexbox/justify.scss";
+@import "../../mixins/flexbox/size.scss";
+@import "../../mixins/fonts/Shrikhand.scss";
+@import "../../mixins/paddings/paddings.scss";
+@import "../../mixins/fonts/font-size.scss";
+@import "../../mixins/margins/margins.scss";
+@import "../../mixins/themes/ohmyfood-colors.scss";
+@import "../../mixins/ui/card.scss";
+article {
+    @include column;
+    background-color: $smoke;
+    
+    h2 {
+        @include padding-left(5%);
+        @include padding-top(10%);
+        @include margin-bottom(5%);
+        font-family: "Roboto-Bold", sans-serif;
+        font-size : 1.5rem;
+        font-weight: bold;
+
+    }
+    .results-container {
+        @include margin-col(5%);
+        @include horizontal-center;
+    }
+    ul {
+        @include column;
+    }
+    li {
+        @include row;
+        @include full-width;
+        @include padding-bottom(10%);
+    }
+    a {
+        @include full-width;
+    }
+    .card {
+        @include card;
+        @include full-width;
+    }
+}
+@media (min-width: 991px){
+    article {
+        padding-top : 5% !important;
+        padding-bottom : 7% !important;
+        h2 {
+            padding : 2% !important;
+            padding-left : 5% !important;
+            margin : 0% !important;
+            font-size: 150% !important;
+        }
+        
+        ul {
+            flex-flow : row nowrap !important;  
+            gap : 17%;
+        }
+        a {
+            width : 10% !important;
+        }
+        li {
+            width : 180% !important;
+            padding : 1% !important;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        .card_content{
+            padding : 5% !important;
+        }
+        .card {
+            .toast {
+                left: 65% !important;
+            }
+        }
+    }   
+}

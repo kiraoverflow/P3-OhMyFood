@@ -1,0 +1,22 @@
+@mixin column {
+    display : flex;
+    flex-flow : column nowrap;
+}
+
+@mixin row {
+    display : flex;
+    flex-flow : row nowrap;
+}
+
+@mixin column-wrapped {
+    display : flex;
+    flex-flow : column wrap;
+}
+
+@mixin row-wrapped {
+    display : flex;
+    flex-flow : row wrap;
+}
+@mixin flex-inline {
+    display : inline-flex;
+}

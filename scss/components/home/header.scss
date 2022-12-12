@@ -1,0 +1,90 @@
+@import "../../mixins/flexbox/forms.scss";
+@import "../../mixins/flexbox/justify.scss";
+@import "../../mixins/fonts/Shrikhand.scss";
+@import "../../mixins/paddings/paddings.scss";
+@import "../../mixins/fonts/font-size.scss";
+@import "../../mixins/margins/margins.scss";
+@import "../../mixins/ui/input.scss";
+@import "../../mixins/ui/button.scss";
+
+header {
+    @include column;
+    .logo-container{
+        @include row;
+        @include horizontal-center;
+        @include padding-row(3%);
+        :first-child{
+            font-family: 'Shrikhand';
+            font-weight: 400;
+            font-size : 1.8em;
+        }
+    }
+
+    .location {
+        @include row;
+        @include horizontal-center;
+        @include padding(4%);
+        background-color: $smoke;
+        box-shadow: inset 1px 2px 6px -5px black;
+        input {
+            @include flex-inline;
+            @include location-input;
+            font-family: "Roboto", sans-serif;
+        }
+        i {
+            @include font-size(100%);
+            @include margin-left(15%);
+        }
+    }
+    .headline-container {
+        @include column;
+        @include horizontal-center;
+        @include vertical-center;
+        @include padding-top(5%);
+        background-color: $bg-header;
+        .primary-headline {
+            @include row;
+            @include padding-col(15%);
+            h1 {
+                font-family: "Roboto-Black", sans-serif;
+                font-weight : bold;
+                font-size: 1.5rem;
+                text-align: center;
+                line-height: 1.8rem;
+                letter-spacing: 0px;
+            }
+        }
+        .second-headline {
+            @include column;
+            @include horizontal-center;
+            @include vertical-center;
+            @include padding-bottom(10%);
+            :first-child {
+                font-family: "Roboto-Light", sans-serif;
+                font-size : 1.1rem;
+                font-weight : lighter;
+                color : grey;
+                text-align: center;
+            }
+            :nth-child(2){
+                @include headline-button;
+                @include margin-row(8%);
+            }
+        }
+    }
+}
+@media (min-width: 991px) {
+    header {
+        .location {
+            gap : 1% !important;
+
+            i {
+                margin-left : 4% !important;
+                margin-top: 0.4% !important;
+            }
+            input {
+                font-size : 21px !important;
+            }
+        }
+    }
+ }

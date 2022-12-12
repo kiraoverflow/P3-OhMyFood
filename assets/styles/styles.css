@@ -1,0 +1,872 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-gujarati-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0964-0965, U+0A80-0AFF, U+200C-200D, U+20B9, U+25CC, U+A830-A839;
+}
+/* shrikhand-latin-ext-400-normal*/
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-latin-ext-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* shrikhand-latin-400-normal*/
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-latin-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../assets/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../../../assets/fonts/roboto/Roboto-Regular.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../../assets/fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Bold.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("../../../assets/fonts/Roboto/Roboto-Black.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Black.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../../../assets/fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Light.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../assets/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../../../assets/fonts/roboto/Roboto-Regular.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../../assets/fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Bold.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("../../../assets/fonts/Roboto/Roboto-Black.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Black.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../../../assets/fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Light.woff") format("woff");
+  font-style: normal;
+}
+header {
+  display: flex;
+  flex-flow: column nowrap;
+}
+header .logo-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+header .logo-container :first-child {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 1.8em;
+}
+header .location {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 4%;
+  background-color: #eaeaea;
+  box-shadow: inset 1px 2px 6px -5px black;
+}
+header .location input {
+  display: inline-flex;
+  font-family: "Roboto";
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 900;
+  border: 0;
+  background-color: #eaeaea;
+}
+header .location i {
+  font-size: 100%;
+  margin-left: 15%;
+}
+header .headline-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  background-color: #f6f6f6;
+}
+header .headline-container .primary-headline {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+header .headline-container .primary-headline h1 {
+  font-family: "Roboto-Black", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.8rem;
+  letter-spacing: 0px;
+}
+header .headline-container .second-headline {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+}
+header .headline-container .second-headline :first-child {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  color: grey;
+  text-align: center;
+}
+header .headline-container .second-headline :nth-child(2) {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(-10deg, #9356DC, #FF79DA);
+  padding: 4%;
+  border-radius: 30px;
+  border: 0;
+  width: 60%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+@media (min-width: 991px) {
+  header {
+    background-color: red;
+  }
+  header .location i {
+    margin-left: 4% !important;
+  }
+}
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-gujarati-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0964-0965, U+0A80-0AFF, U+200C-200D, U+20B9, U+25CC, U+A830-A839;
+}
+/* shrikhand-latin-ext-400-normal*/
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-latin-ext-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* shrikhand-latin-400-normal*/
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-latin-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../assets/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../../../assets/fonts/roboto/Roboto-Regular.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../../assets/fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Bold.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("../../../assets/fonts/Roboto/Roboto-Black.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Black.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../../../assets/fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../../../assets/fonts/Roboto/Roboto-Light.woff") format("woff");
+  font-style: normal;
+}
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+section h2 {
+  padding-right: 55%;
+  margin-bottom: 5%;
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+section ul {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+}
+section li {
+  margin-bottom: 10%;
+  width: 90%;
+}
+section button {
+  display: block;
+  padding: 8%;
+  text-align: center;
+  width: 100%;
+  box-shadow: 2px 4px 13px -4px rgb(165, 165, 165);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  border: 0;
+  margin-left: 3%;
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+section .number {
+  position: absolute;
+  margin-top: 7%;
+}
+section .bulletpoint {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  background: #9356DC;
+  border-radius: 50%;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+section i {
+  margin-left: 10%;
+  margin-top: 6.5%;
+  font-size: 20px;
+  position: absolute;
+  color: #7e7e7e;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-gujarati-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0964-0965, U+0A80-0AFF, U+200C-200D, U+20B9, U+25CC, U+A830-A839;
+}
+/* shrikhand-latin-ext-400-normal*/
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-latin-ext-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* shrikhand-latin-400-normal*/
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-latin-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+article {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #eaeaea;
+}
+article h2 {
+  padding-left: 5%;
+  padding-top: 10%;
+  margin-bottom: 5%;
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+article .results-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: center;
+}
+article ul {
+  display: flex;
+  flex-flow: column nowrap;
+}
+article li {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding-bottom: 10%;
+}
+article a {
+  width: 100%;
+}
+article .card {
+  display: grid;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 2px 0px 19px -4px rgb(165, 165, 165);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding-bottom: 4%;
+  width: 100%;
+}
+article .card .toast {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  left: 75%;
+  top: 5%;
+  background: #99e2d0;
+  color: #2da285;
+  padding: 2% 3% 2% 3%;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 80%;
+  border-radius: 8%;
+}
+article .card .card_content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+article .card .card_content .left h3 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 0.01rem;
+}
+article .card .card_content .left p {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 1.2rem;
+}
+article .card .card_content .right .fa-solid {
+  color: transparent;
+}
+article .card .card_content .right .fa-stack {
+  border: 0;
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+article .card .card_content .right .fa-stack:hover .fa-solid {
+  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+}
+article .card .cards-img-container img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 180px;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-gujarati-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0964-0965, U+0A80-0AFF, U+200C-200D, U+20B9, U+25CC, U+A830-A839;
+}
+/* shrikhand-latin-ext-400-normal*/
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-latin-ext-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* shrikhand-latin-400-normal*/
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-latin-400-normal.woff2") format("woff2"), url("assets/fonts/Shrikhand/shrikhand-all-400-normal.woff") format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-top: 3%;
+  background-color: #353535;
+}
+footer .footer-col {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 5%;
+  width: 80%;
+  color: white;
+}
+footer .footer-col span {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 1.4em;
+  color: white;
+  padding-bottom: 5%;
+}
+footer ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+footer li {
+  display: inline-flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  padding-bottom: 3%;
+}
+footer li i {
+  font-size: 1.1em;
+  padding-right: 3%;
+}
+footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation-name: removeLoader;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+html {
+  animation-name: lock;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+p, h1, h2, h3, button, img, span, i, input, a {
+  animation-name: blur;
+  animation-duration: 3s;
+}
+
+.loader-spinner {
+  font-size: 50px;
+  color: black;
+}
+
+.loader-spinner i {
+  animation-name: spinnerRotation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spinnerRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes lock {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+  }
+}
+@keyframes blur {
+  from {
+    filter: blur(5px);
+  }
+  to {
+    filter: none;
+  }
+}
+@keyframes removeLoader {
+  from {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

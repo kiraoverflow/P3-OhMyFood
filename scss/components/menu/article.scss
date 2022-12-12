@@ -1,0 +1,235 @@
+@import "../../mixins/flexbox/forms.scss";
+@import "../../mixins/flexbox/justify.scss";
+@import "../../mixins/flexbox/size.scss";
+@import "../../mixins/fonts/Shrikhand.scss";
+@import "../../mixins/paddings/paddings.scss";
+@import "../../mixins/fonts/font-size.scss";
+@import "../../mixins/margins/margins.scss";
+@import "../../mixins/themes/ohmyfood-colors.scss";
+
+article {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top : -10%;
+    background-color: $smoke;
+    font-family: "Roboto", sans-serif;
+
+    li {
+        @include margin-bottom(5%);
+    }
+    .restaurant-name {
+        @include row;
+        @include vertical-center;
+        @include margin-col(5%);
+        padding-top: 10%;
+        padding-bottom: 5%;
+        padding-left : 3%;  
+        h2 {
+            justify-content: flex-start;
+            font-family: "Shrikhand",sans-serif;
+            font-size : 150%;
+        }
+        i {
+            font-size: 150%;
+            padding-left : 35%;
+        }
+    }
+    .results-container {
+        @include column;
+        @include horizontal-center;
+        @include margin-col(5%);
+        ul {
+            @include column;
+        }
+        li {
+            @include row;
+        }
+        i {
+            font-size: 150%;
+            padding-left : 75%;
+        }
+        .course {
+            @include row;
+            width : fit-content;
+            padding-left : 3%;
+            margin-bottom : 5%;
+            margin-top : 2%;
+            span {
+                border-bottom : 3px solid $toast;
+                width : 60%;
+            }
+        }
+        .card {
+            @include full-width;
+            display: flex;
+            box-shadow: 2px 0px 19px -4px rgb(165, 165, 165);
+            border-radius: 20px;
+            background-color: $bg-header;
+
+            &:hover {
+                .slide {
+                    display: inline-flex;
+                    animation: slide-left 1s forwards;
+                    
+                }
+                .card_content {
+                    .left {
+                        p {
+                            width : 90%;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+            .slide {
+
+                display: none;
+                width : 30%;
+                background-color: #99e2d0;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+
+                .slide-content {
+                    display: flex;
+                    width : 100%;
+                    font-size: 110%;
+                    color : white;
+                    animation: rotate 1s forwards;
+                    i {
+                        overflow: hidden;
+                       
+                    }
+                }
+            }
+            .card_content {
+                @include row;
+                @include between;
+                padding : 3%;
+                padding-left: 5%;
+                width : 100%;
+                justify-content: space-between;
+                text-overflow: ellipsis ;
+                .left {
+                    display: flex;
+                    flex-flow : column nowrap;
+                    justify-content: space-around;
+                    text-overflow: ellipsis ;
+                    h3 {
+                        font-family: "Roboto-Bold", sans-serif;
+                        font-size : 1em;
+                        margin-bottom: 4%;
+                        text-overflow: ellipsis ;
+                        white-space: nowrap;
+                    }
+                    
+                    p {
+                        font-family: "Roboto", sans-serif;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis ;
+                        font-size : 0.9em;
+                    }
+                }
+                
+                .right {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: flex-end;
+                    .price {
+                        display: inline-flex;
+                        flex-flow: column nowrap;
+                        align-items: flex-end;
+                        p {
+                            font-family: "Roboto-Bold";
+                            font-size : 0.9em;
+                            text-overflow: ellipsis ;
+                        }
+                    }
+        
+                }
+            }
+        }
+        .order {
+            display : flex;
+            justify-content: center;
+
+            margin-top : 5%;
+            margin-bottom: 15%;
+            button {
+                font-family: "Roboto",sans-serif;
+                font-size : 0.9em;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                background-image: linear-gradient(-10deg, $first , $second);
+                padding: 4.5%;
+                border-radius: 30px;
+                border : 0;
+                width: 60%;
+            }
+        }   
+    }
+}
+
+.entry {
+    opacity: 0;
+    animation: fadein 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+  .plats {
+    opacity: 0;
+    animation: fadein 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+  .dessert {
+    opacity: 0;
+    animation: fadein 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes fadein {
+    to {
+      opacity: 1;
+    }
+  }
+@keyframes rotate {
+ from {
+    left : 0;
+ }
+ to {
+    left : 10;
+ }
+}
+  @keyframes slide-left {
+    from {
+        display: none;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        width : 0%;
+    //   margin-left: 100%;
+    }
+    to {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width : 30%;
+    //   margin-left: 0%;
+    }
+  }
+
+  @media (min-width: 991px) {
+    article {
+        margin-top : unset !important;
+        padding-left : 20% !important;
+        padding-right : 20% !important;
+        .results-container{
+            .course {
+                span {
+                    font-size: 25px !important;
+                }
+            }
+        }
+    }
+  }

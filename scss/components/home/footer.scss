@@ -1,0 +1,67 @@
+@import "../../mixins/flexbox/forms.scss";
+@import "../../mixins/flexbox/justify.scss";
+@import "../../mixins/flexbox/size.scss";
+@import "../../mixins/fonts/Shrikhand.scss";
+@import "../../mixins/paddings/paddings.scss";
+@import "../../mixins/fonts/font-size.scss";
+@import "../../mixins/margins/margins.scss";
+@import "../../mixins/themes/ohmyfood-colors.scss";
+@import "../../mixins/ui/card.scss";
+footer {
+    @include column;
+    @include padding-top(3%);
+    background-color : $bg-footer;
+
+    .footer-col {
+        @include column;
+        @include padding(5%);
+        width : 80%;
+        color :white;
+        span {
+            font-family: "Shrikhand";
+            font-weight: 400;
+            font-size : 1.4em;
+            color : white;
+            padding-bottom : 5%;
+        }
+    }
+
+    ul {
+        @include column;
+        @include horizontal-center;
+    }
+
+    li {
+        @include flex-inline;
+        font-family: "Roboto", sans-serif;
+        font-size : 1.1em;
+        padding-bottom : 3%;
+        i {
+            font-size : 1.1em;
+            padding-right : 3%;
+        }
+        a {
+            text-decoration: none;
+            color : white;  
+        }
+    }
+
+}
+
+@media (min-width: 991px){
+    footer {
+        padding-top : 0 !important;
+        .footer-col {
+            span {
+                padding-bottom: 1% !important;
+            }
+        }
+
+        li {
+            padding-bottom: 1% !important;
+            i {
+                padding-right : 1% !important;
+            }
+        }
+    }
+}

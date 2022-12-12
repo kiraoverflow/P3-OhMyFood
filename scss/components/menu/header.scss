@@ -1,0 +1,47 @@
+@import "../../mixins/flexbox/forms.scss";
+@import "../../mixins/flexbox/justify.scss";
+@import "../../mixins/flexbox/size.scss";
+@import "../../mixins/fonts/Shrikhand.scss";
+@import "../../mixins/paddings/paddings.scss";
+@import "../../mixins/fonts/font-size.scss";
+@import "../../mixins/margins/margins.scss";
+
+header {
+    @include full-width;
+    @include horizontal-center;
+    .logo-container {
+        @include row;
+        @include vertical-center;
+        @include padding-row(3%);
+        gap: 20%;
+        :first-child {
+            padding-left : 5%;
+            font-size: 120%;
+        }
+        :nth-child(2) {
+            font-family: 'Shrikhand';
+            font-weight: 400;
+            font-size : 1.8em;
+            margin-right: 30%;
+        }
+    }
+    .hero-img-container {
+        @include full-width;
+        img {
+            @include full-width;
+            object-fit: cover;
+            
+        }
+    }
+
+}
+@media (min-width: 991px) {
+    header {
+        .logo-container {
+            justify-content: center !important;
+        }
+        .hero-img-container {
+            display: none !important;
+        }
+    }
+}

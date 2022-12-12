@@ -1,0 +1,23 @@
+@mixin margin-left($margin-size) {
+    margin-left : $margin-size;
+}
+@mixin margin-right($margin-size) {
+    margin-right : $margin-size;
+}
+@mixin margin-top($margin-size) {
+    margin-top : $margin-size;
+}
+@mixin margin-bottom($margin-size) {
+    margin-bottom : $margin-size;
+}
+@mixin margin($margin-size) {
+    margin : $margin-size;
+}
+@mixin margin-row($margin-size) {
+    margin-top : $margin-size;
+    margin-bottom: $margin-size;
+}
+@mixin margin-col($margin-size) {
+    margin-left : $margin-size;
+    margin-right : $margin-size;
+}
