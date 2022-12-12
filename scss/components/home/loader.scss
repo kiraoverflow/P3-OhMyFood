@@ -16,15 +16,18 @@
     animation-timing-function: linear;
 }
 html {
-    animation-name: lock;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
+    // animation-name: lock;
+    // animation-duration: 4s;
+    // animation-timing-function: linear;
+    // animation-fill-mode: forwards;
+    animation : lock 4s linear forwards;
+
 }
 
-p,h1,h2,h3,button,img,span,i,input,a {
-    animation-name : blur;
-    animation-duration: 3s;
+article,section,header,footer {
+    // animation-name : blur;
+    // animation-duration: 5s;
+    animation : blur 2s step-end forwards;
 }
 .loader-spinner {
     font-size: 50px;
@@ -34,7 +37,6 @@ p,h1,h2,h3,button,img,span,i,input,a {
 .loader-spinner i {
     animation-name: spinnerRotation;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
@@ -59,10 +61,10 @@ p,h1,h2,h3,button,img,span,i,input,a {
   }
   @keyframes blur {
     from {
-        filter : blur(5px);
+        filter :opacity(0);
     }
     to {
-        filter : none;
+        filter :opacity(1);
     }
     
   }

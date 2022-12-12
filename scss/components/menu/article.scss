@@ -13,7 +13,7 @@ article {
     margin-top : -10%;
     background-color: $smoke;
     font-family: "Roboto", sans-serif;
-
+    
     li {
         @include margin-bottom(5%);
     }
@@ -46,7 +46,11 @@ article {
         }
         i {
             font-size: 150%;
-            padding-left : 75%;
+            position: absolute;
+            left: 44%;
+            margin-top: -3%;
+            margin-left: 2%;
+            transform: rotate(50deg);
         }
         .course {
             @include row;
@@ -65,11 +69,11 @@ article {
             box-shadow: 2px 0px 19px -4px rgb(165, 165, 165);
             border-radius: 20px;
             background-color: $bg-header;
-
+            
             &:hover {
                 .slide {
                     display: inline-flex;
-                    animation: slide-left 1s forwards;
+                    animation: slide-left 1s ease-in forwards;
                     
                 }
                 .card_content {
@@ -83,22 +87,24 @@ article {
                 }
             }
             .slide {
-
+                
                 display: none;
                 width : 30%;
                 background-color: #99e2d0;
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
-
+                
                 .slide-content {
                     display: flex;
                     width : 100%;
                     font-size: 110%;
                     color : white;
-                    animation: rotate 1s forwards;
+                    transform: rotate(-50deg);
+                    transition: 5s;
+                    position: absolute;
                     i {
                         overflow: hidden;
-                       
+                        
                     }
                 }
             }
@@ -143,17 +149,19 @@ article {
                         p {
                             font-family: "Roboto-Bold";
                             font-size : 0.9em;
+                            font-weight: 900;
                             text-overflow: ellipsis ;
+
                         }
                     }
-        
+                    
                 }
             }
         }
         .order {
             display : flex;
             justify-content: center;
-
+            
             margin-top : 5%;
             margin-bottom: 15%;
             button {
@@ -176,60 +184,59 @@ article {
     opacity: 0;
     animation: fadein 1s ease-in-out forwards;
     animation-delay: 0.5s;
-  }
-  .plats {
+}
+.plats {
     opacity: 0;
     animation: fadein 1s ease-in-out forwards;
     animation-delay: 1s;
-  }
-  .dessert {
+}
+.dessert {
     opacity: 0;
     animation: fadein 1s ease-in-out forwards;
     animation-delay: 1.5s;
-  }
-  
-  @keyframes fadein {
-    to {
-      opacity: 1;
-    }
-  }
-@keyframes rotate {
- from {
-    left : 0;
- }
- to {
-    left : 10;
- }
 }
-  @keyframes slide-left {
+
+@keyframes fadein {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
     from {
         display: none;
         overflow: hidden;
         align-items: center;
         justify-content: center;
         width : 0%;
-    //   margin-left: 100%;
     }
     to {
         display: flex;
         justify-content: center;
         align-items: center;
-        width : 30%;
-    //   margin-left: 0%;
+        width : 40%;
     }
-  }
+}
 
-  @media (min-width: 991px) {
+@media (min-width: 991px) {
     article {
         margin-top : unset !important;
         padding-left : 20% !important;
         padding-right : 20% !important;
+        .restaurant-name {
+            i {
+                padding-left: 26% !important;
+            }
+        }
         .results-container{
             .course {
                 span {
                     font-size: 25px !important;
                 }
             }
+            i {
+                left : 49% !important;
+            }
         }
     }
-  }
+}

@@ -467,7 +467,11 @@ article .results-container li {
 }
 article .results-container i {
   font-size: 150%;
-  padding-left: 75%;
+  position: absolute;
+  left: 44%;
+  margin-top: -3%;
+  margin-left: 2%;
+  transform: rotate(50deg);
 }
 article .results-container .course {
   display: flex;
@@ -490,7 +494,7 @@ article .results-container .card {
 }
 article .results-container .card:hover .slide {
   display: inline-flex;
-  animation: slide-left 1s forwards;
+  animation: slide-left 1s ease-in forwards;
 }
 article .results-container .card:hover .card_content .left p {
   width: 90%;
@@ -509,7 +513,9 @@ article .results-container .card .slide .slide-content {
   width: 100%;
   font-size: 110%;
   color: white;
-  animation: rotate 1s forwards;
+  transform: rotate(-50deg);
+  transition: 5s;
+  position: absolute;
 }
 article .results-container .card .slide .slide-content i {
   overflow: hidden;
@@ -557,6 +563,7 @@ article .results-container .card .card_content .right .price {
 article .results-container .card .card_content .right .price p {
   font-family: "Roboto-Bold";
   font-size: 0.9em;
+  font-weight: 900;
   text-overflow: ellipsis;
 }
 article .results-container .order {
@@ -601,14 +608,6 @@ article .results-container .order button {
     opacity: 1;
   }
 }
-@keyframes rotate {
-  from {
-    left: 0;
-  }
-  to {
-    left: 10;
-  }
-}
 @keyframes slide-left {
   from {
     display: none;
@@ -621,7 +620,7 @@ article .results-container .order button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 40%;
   }
 }
 @media (min-width: 991px) {
@@ -630,8 +629,14 @@ article .results-container .order button {
     padding-left: 20% !important;
     padding-right: 20% !important;
   }
+  article .restaurant-name i {
+    padding-left: 26% !important;
+  }
   article .results-container .course span {
     font-size: 25px !important;
+  }
+  article .results-container i {
+    left: 49% !important;
   }
 }
 @font-face {
